@@ -27,7 +27,7 @@ namespace GJAM4.Player
         {
             if (_interact.WasPerformedThisFrame())
             {
-                _playerController.Interact();
+
             }
         }
 

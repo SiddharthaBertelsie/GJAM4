@@ -1,22 +1,25 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace GJAM4.Player
 {
-    public class PlayerController : MonoBehaviour
+    /// <summary>
+    /// This class handles swapping between different views of the game world
+    /// depending on wheree player is and where they're looking at
+    /// </summary>
+    public class ScreenSwapper : MonoBehaviour
     {
         #region Variables
 
-        [Header("Scripts")]
-
-        [SerializeField] private ScreenSwapper _screenSwapper;
+        [SerializeField] private Image _playerScreen;
 
         #endregion
 
         #region Methods
 
-        public void Interact()
+        public void SwapScreens(Sprite screenToSwapTo)
         {
-            _screenSwapper.SwapScreens();
+            _playerScreen.sprite = screenToSwapTo;
         }
 
         #endregion
